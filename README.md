@@ -6,11 +6,18 @@ This repository (should) contain all you need to cross compile on Ubuntu for the
  - VSCode integration
  - clangd integration
 
+*This is a first really quick draft to start sharing it. If you notice anything please don't hesitate to open an issue, I'd like to help as much as possible.*
+
 # Setup
 ## Prerequisites
 On Ubuntu you'll probably requires this packages :
 ```bash
 apt-get install build-essentials cmake git qemu-user-static clangd gdb-multiarch
+```
+
+Then clone the repo :
+```bash
+git clone --recurse-submodules git@github.com:maxmarsc/xc-bela-cmake.git
 ```
 
 ## Linaro
@@ -73,7 +80,6 @@ I provided two debugging targets (using the `native-debugger` extension):
 
 # Kudos
 Thanks to these repos for hints & tips,
-
- - https://raw.githubusercontent.com/AndrewCapon/OSXBelaCrossCompiler/master/SyncBelaSysroot.sh
- - https://github.com/thetechnobear/xcBela
- - https://github.com/ebai101/xc-bela-container
+ - [OSXBelaCrossCompiler : for OSX](https://github.com/AndrewCapon/OSXBelaCrossCompiler)
+ - [xcBela : generic xc bela env with cmake and gcc](https://github.com/thetechnobear/xcBela)
+ - [xc-bela-container : cmake and vscode integration using Docker dev envs](https://github.com/ebai101/xc-bela-container)
