@@ -74,4 +74,6 @@ I provided two debugging targets (using the `native-debugger` extension):
 # Kudos
 Thanks to these repos for hints & tips,
 
-https://raw.githubusercontent.com/AndrewCapon/OSXBelaCrossCompiler/master/SyncBelaSysroot.sh
+ - https://raw.githubusercontent.com/AndrewCapon/OSXBelaCrossCompiler/master/SyncBelaSysroot.sh
+ - https://github.com/thetechnobear/xcBela
+ - https://github.com/ebai101/xc-bela-container
