@@ -1,0 +1,79 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+        {
+            "type": "shell",
+            "label" : "[Tests] Start qemu",
+            "command": "qemu-arm-static",
+            "args": [
+                "-L",
+                "/usr/local/linaro/arm-bela-linux-gnueabihf/arm-linux-gnueabihf/libc",
+                "-g",
+                "1234",
+                "${workspaceRoot}/build/bin/tests"
+            ],
+            "group": "test",
+            "isBackground": true,
+            "problemMatcher": [
+                {
+                  "pattern": [
+                    {
+                      "regexp": ".",
+                      "file": 1,
+                      "location": 2,
+                      "message": 3
+                    }
+                  ],
+                  "background": {
+                    "activeOnStart": false,
+                    "beginsPattern": ".",
+                    "endsPattern": ".",
+                  }
+                }
+            ],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+        },
+        {
+            "type": "shell",
+            "label": "[Bela_executable] Start gdbserver",
+            "command": "ssh",
+            "args": [
+                "root@192.168.6.2",
+                "'gdbserver localhost:2345 ./bela_executable'"
+            ] ,
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "group": "build",
+            "detail": "Starts the gdbserver and waits for success",
+            "isBackground": true,
+            "problemMatcher": {
+                "pattern": [
+                    {
+                        "regexp": ".",
+                        "file": 1,
+                        "location": 2,
+                        "message": 3
+                    }
+                ],
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": "^.*Process*",
+                    "endsPattern": "^.*Listening*"
+                }
+            }
+        }
+	]
+}

@@ -1,0 +1,3 @@
+[submodule "Bela"]
+	path = Bela
+	url = git@github.com:BelaPlatform/Bela.git

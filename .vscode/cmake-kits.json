@@ -1,0 +1,6 @@
+[
+    {
+        "name": "xc-bela",
+        "toolchainFile": "${workspaceRoot}/Toolchain.cmake"
+    }
+]

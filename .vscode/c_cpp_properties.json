@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "name": "Bela",
+            "includePath": [
+                "/usr/local/linaro/BelaSysroot/root/Bela/include",
+                "/usr/local/linaro/BelaSysroot/usr/include",
+                "/usr/local/linaro/BelaSysroot/usr/local/include",
+                "${workspaceFolder}/src/**"
+            ],
+            "intelliSenseMode": "linux-gcc-arm",
+            "compilerPath": "/usr/local/linaro/arm-bela-linux-gnueabihf/bin/arm-linux-gnueabihf-g++",
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json",
+            "configurationProvider": "ms-vscode.cmake-tools"
+        }
+    ],
+    "version": 4
+}
